@@ -28,5 +28,9 @@ module.exports = function countInversions(arr) {
     const midIdx = Math.floor((arr.length + 1) / 2);
     const left = arr.slice(0, midIdx);
     const right = arr.slice(midIdx);
-    return countInversions(left) + countInversions(right) + countSplitInversions(arr, left, right);
+    var leftInversions = countInversions(left);
+    var rightInversions = countInversions(right);
+    var splitInversions = countSplitInversions(arr, left, right);
+    const totalInversions = leftInversions + rightInversions + splitInversions;
+    return totalInversions;
 };
