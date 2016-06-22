@@ -1,5 +1,20 @@
 function countSplitInversions(left, right) {
-
+    var i = 0;
+    var j = 0;
+    var count = 0;
+    while (i < left.length || j < right.length) {
+        if (i == left.length) {
+            j++;
+        } else if (j == right.length) {
+            i++;
+        } else if (left[i] <= right[j]) {
+            i++;
+        } else {
+            count += left.length - i;
+            j++;
+        }
+    }
+    return count;
 }
 
 module.exports = function countInversions(arr) {
