@@ -1,7 +1,7 @@
 {
   "name": "count-inversions",
   "version": "1.0.0",
-  "description": "count inversions n*log(n)",
+  "description": "counting split inversions in n*log(n) time using divide and concuer, see http://www.cs.colostate.edu/~cs320/Slides/05_inv.pdf",
   "main": "index.js",
   "scripts": {
     "test": "node tests.js"
